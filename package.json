@@ -1,0 +1,31 @@
+{
+  "name": "space-invoices-node",
+  "version": "0.0.1",
+  "description": "A NodeJS wrapper module for Space Invoices API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/space-invoices/si-api-js-sdk.git"
+  },
+  "keywords": [
+    "space",
+    "invoices",
+    "api",
+    "wrapper",
+    "bills",
+    "invoicing"
+  ],
+  "author": "Studio404",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/space-invoices/si-api-js-sdk/issues"
+  },
+  "homepage": "https://github.com/space-invoices/si-api-js-sdk#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "superagent": "^3.8.2"
+  }
+}
