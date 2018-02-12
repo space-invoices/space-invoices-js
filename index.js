@@ -1,13 +1,14 @@
 
-var BaseService = require('./lib/baseService');
 var RequestService = require('./lib/requestService');
 var Promise = require('bluebird');
 
-SpaceInvocies = {};
+SpaceInvoices.Models = {
+  Account: require('./lib/models/account'),
+  Document: require('./lib/models/document'),
+  Organisation: require('./lib/models/organisation')
+}
 
-// SpaceInvoices.DEFAULT_HOST = 'https://api.spaceinvoices.com/api/v1/';
-SpaceInvoices.DEFAULT_HOST = 'http://localhost:3000/api/';
-// SpaceInvoices.DEFAULT_PORT = '3000';
+SpaceInvoices.DEFAULT_HOST = 'https://api.spaceinvoices.com/api/v1/';
 
 function SpaceInvoices() {
   if (!(this instanceof SpaceInvoices)) {
@@ -16,18 +17,22 @@ function SpaceInvoices() {
 
   this.requestService = new RequestService(SpaceInvoices.DEFAULT_HOST);
 
-  this.Account = require('./lib/models/account');
+  for (var name in SpaceInvoices.Models) {
+    this[
+      name[0].toLowerCase() + name.substring(1)
+    ] = new SpaceInvoices.Models[name](this);
+  }
 }
 
 // POST https://api.spaceinvoices.com/api/v1/accounts
-
-SpaceInvoices.prototype.register = function() {
+SpaceInvoices.prototype.register = function(email, password) {
   return this.requestService.send('post', 'accounts', {
-    email: 'r@test.com',
-    password: 'test'
-  })
+    email: email,
+    password: password
+  });
 }
 
+// POST https://api.spaceinvoices.com/api/v1/accounts/login
 SpaceInvoices.prototype.init = function(email, password) {
   var self = this;
 
@@ -36,9 +41,9 @@ SpaceInvoices.prototype.init = function(email, password) {
       email: email,
       password: password
     })
-    .then(function(res) {
-      self.requestService.token = res.body.id;
-      resolve();
+    .then(function(token) {
+      self.requestService.token = token.id;
+      resolve(token);
     })
     .catch(function(error) {
       reject(error);
