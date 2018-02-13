@@ -1,6 +1,6 @@
 {
   "name": "space-invoices",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "A NodeJS wrapper module for Space Invoices API",
   "main": "index.js",
   "scripts": {

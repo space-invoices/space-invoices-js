@@ -23,14 +23,13 @@ npm install space-invoices --save
 
 ``` js
 var SpaceInvoices = require('space-invoices');
-
-var spaceInvoices = new SpaceInvoices('API_KEY')
+var spaceInvoices = new SpaceInvoices('API_KEY');
 ```
 
-Example usage SpaceInvoices SDK for creating an Organisation
-``` js
-var accountId = 'ACCOUNT_ID'
 
+Example usage of SpaceInvoices SDK for creating an Organisation
+``` js
+var accountId = 'ACCOUNT_ID';
 spaceInvoices.organisation.create(accountId, {
 	name: 'Studio404', 
 	country: "USA"
