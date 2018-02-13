@@ -1,12 +1,13 @@
+
 # Space Invoices Node.js SDK
 
 The Space Invoices SDK provides an easy way to access Space Invoices API from application written NodeJs.
 
 ## Documentation
 
-#### Detailed documentation about the API can be found at [docs.spaceinvoices.com](http://docs.spaceinvoices.com).
+ **Detailed documentation about the API can be found at [docs.spaceinvoices.com](http://docs.spaceinvoices.com)**
 
-#### We also invite you to join our Slack community channel [Space Invaders](http://joinslack.spaceinvoices.com)
+**We also invite you to join our Slack community channel [Space Invaders](http://joinslack.spaceinvoices.com)**
 
 ## Installation
 
@@ -15,4 +16,30 @@ Install the package with:
 npm install space-invoices --save
 ```
 
-API key can be obtained in our Slack channel by joining here: [joinslack.spaceinvoices.com](http://joinslack.spaceinvoices.com)
+
+## Usage
+
+**API_KEY** and **ACCOUNT_ID** can be obtained in our Slack channel by joining here: [joinslack.spaceinvoices.com](http://joinslack.spaceinvoices.com)
+
+```
+var SpaceInvoices = require('space-invoices');
+
+var spaceInvoices = new SpaceInvoices('API_KEY')
+```
+
+```
+var accountId = 'ACCOUNT_ID'
+
+spaceInvoices.organisation.create(accountId, {
+	name: 'Studio404', 
+	country: "USA"
+ })
+.then(function(organisation) {
+	console.log(organisation);
+})
+.catch(function(error) {
+	console.error(error)
+})
+```
+
+[spaceinvoices.com](http://spaceinvoices.com)
