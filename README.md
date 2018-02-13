@@ -15,4 +15,4 @@ Install the package with:
 npm install space-invoices --save
 ```
 
-API key can be obtained in our Slack channel by joining here: [Space Invaders](http://joinslack.spaceinvoices.com)
+API key can be obtained in our Slack channel by joining here: [joinslack.spaceinvoices.com](http://joinslack.spaceinvoices.com)
