@@ -27,6 +27,7 @@ var SpaceInvoices = require('space-invoices');
 var spaceInvoices = new SpaceInvoices('API_KEY')
 ```
 
+Example usage SpaceInvoices SDK for creating an Organisation
 ``` js
 var accountId = 'ACCOUNT_ID'
 
