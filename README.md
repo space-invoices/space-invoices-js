@@ -21,13 +21,13 @@ npm install space-invoices --save
 
 **API_KEY** and **ACCOUNT_ID** can be obtained in our Slack channel by joining here: [joinslack.spaceinvoices.com](http://joinslack.spaceinvoices.com)
 
-```
+``` js
 var SpaceInvoices = require('space-invoices');
 
 var spaceInvoices = new SpaceInvoices('API_KEY')
 ```
 
-```
+``` js
 var accountId = 'ACCOUNT_ID'
 
 spaceInvoices.organisation.create(accountId, {
