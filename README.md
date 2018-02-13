@@ -4,10 +4,11 @@ The Space Invoices SDK provides an easy way to access Space Invoices API from ap
 
 ## Documentation
 
-See the [Node API docs](https://space-invoices.github.io/si-api-docs/?node#introduction).
+Detailed documentation about the API can be found at [docs.spaceinvoices.com](http://docs.spaceinvoices.com).
 
 ## Installation
 
 Install the package with:
-
-    npm install space-invoices --save
+```bash
+npm install space-invoices --save
+```
