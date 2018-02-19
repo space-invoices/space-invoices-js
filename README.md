@@ -29,7 +29,7 @@ Example usage of SpaceInvoices SDK for creating an Organization.
 ``` js
 var accountId = 'ACCOUNT_ID';
 
-spaceInvoices.organization.create(accountId, {
+spaceInvoices.organizations.create(accountId, {
   name: 'Studio404', 
   country: "USA"
 })
