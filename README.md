@@ -18,11 +18,11 @@ npm install space-invoices --save
 
 ## Usage
 
-**API_KEY** and **ACCOUNT_ID** can be obtained in our Slack channel by joining here: [joinslack.spaceinvoices.com](http://joinslack.spaceinvoices.com)
+**TOKEN** and **ACCOUNT_ID** can be obtained by signing up for a develoepr account on our website: [spaceinvoices.com](http://spaceinvoices.com)
 
 ``` js
 var SpaceInvoices = require('space-invoices');
-var spaceInvoices = new SpaceInvoices('API_KEY');
+var spaceInvoices = new SpaceInvoices('TOKEN');
 ```
 
 Example usage of SpaceInvoices SDK for creating an Organization.
@@ -30,7 +30,7 @@ Example usage of SpaceInvoices SDK for creating an Organization.
 var accountId = 'ACCOUNT_ID';
 
 spaceInvoices.organizations.create(accountId, {
-  name: 'Studio404', 
+  name: 'SpaceX', 
   country: "USA"
 })
 .then(function(organization) {
