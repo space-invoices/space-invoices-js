@@ -4,8 +4,15 @@ var Promise = require('bluebird');
 
 SpaceInvoices.Models = {
   Accounts: require('./lib/models/account'),
+  Clients: require('./lib/models/client'),
+  Companies: require('./lib/models/companies'),
+  Currency: require('./lib/models/currency'),
   Documents: require('./lib/models/document'),
-  Organizations: require('./lib/models/organization')
+  Items: require('./lib/models/item'),
+  Organizations: require('./lib/models/organization'),
+  Payments: require('./lib/models/payments'),
+  Recurrences: require('./lib/models/recurrence'),
+  Taxes: require('./lib/models/tax'),
 }
 
 SpaceInvoices.DEFAULT_HOST = 'https://api.spaceinvoices.com/v1/';
