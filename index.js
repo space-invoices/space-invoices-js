@@ -6,6 +6,7 @@ SpaceInvoices.Models = {
   Accounts: require('./lib/models/account'),
   Clients: require('./lib/models/client'),
   Companies: require('./lib/models/companies'),
+  Countries: require('./lib/models/countries'),
   Currency: require('./lib/models/currency'),
   Documents: require('./lib/models/document'),
   Items: require('./lib/models/item'),
