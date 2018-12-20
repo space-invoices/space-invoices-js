@@ -1,6 +1,5 @@
 
 var RequestService = require('./lib/requestService');
-var Promise = require('bluebird');
 
 SpaceInvoices.Models = {
   Accounts: require('./lib/models/account'),
@@ -16,14 +15,24 @@ SpaceInvoices.Models = {
   Taxes: require('./lib/models/tax'),
 }
 
-SpaceInvoices.DEFAULT_HOST = 'https://api.spaceinvoices.com/v1/';
+SpaceInvoices.API_URL = 'https://api.spaceinvoices.com/v1/';
+SpaceInvoices.TEST_API_URL = 'https://api-test.spaceinvoices.com/v1/';
+SpaceInvoices.LOCALHOST_API_URL = 'http://localhost:3000/v1/';
 
-function SpaceInvoices(token) {
+function SpaceInvoices(token, env) {
   if (!(this instanceof SpaceInvoices)) {
     return new SpaceInvoices(token);
   }
 
-  this.requestService = new RequestService(SpaceInvoices.DEFAULT_HOST, token);
+  let url;
+
+  switch(env) {
+    case 'test': url = SpaceInvoices.TEST_API_URL; break;
+    case 'localhost': url = SpaceInvoices.LOCALHOST_API_URL; break;
+    default: url = SpaceInvoices.API_URL; break;
+  }
+
+  this.requestService = new RequestService(url, token);
 
   for (var name in SpaceInvoices.Models) {
     this[

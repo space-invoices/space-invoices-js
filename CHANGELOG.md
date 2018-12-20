@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.1.0 - 2018-12-20
+
+* Added a testing option allowing connection to the test api
+* Fixed a typo in 422 error
+* Added option for creating organization default
+* Added option for updating organization default
+
 ## 1.0.0 - 2018-11-07
 
 * Version bump to 1.0.0
