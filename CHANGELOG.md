@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.2.1 - 2018-5-16
+* Removed unnecessary file from being published to npm.
+
 ## 1.2.0 - 2018-5-16
 * Added units 
 * Added categories -> `spaceInvoices.categories[create, edit, delete, list]`
