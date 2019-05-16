@@ -3,15 +3,18 @@ var RequestService = require('./lib/requestService');
 
 SpaceInvoices.Models = {
   Accounts: require('./lib/models/account'),
+  Categories: require('./lib/models/category'),
   Clients: require('./lib/models/client'),
   Companies: require('./lib/models/companies'),
   Countries: require('./lib/models/countries'),
   Currency: require('./lib/models/currency'),
   Documents: require('./lib/models/document'),
+  DocumentCategories: require('./lib/models/documentCategory'),
   Items: require('./lib/models/item'),
   Organizations: require('./lib/models/organization'),
   Payments: require('./lib/models/payments'),
   Recurrences: require('./lib/models/recurrence'),
+  Units: require('./lib/models/unit'),
   Taxes: require('./lib/models/tax'),
 }
 

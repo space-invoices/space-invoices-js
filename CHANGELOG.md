@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.2.0 - 2018-5-16
+* Added units 
+* Added categories -> `spaceInvoices.categories[create, edit, delete, list]`
+* Added documentCategories -> `spaceInvoices.documentCategories[create, edit, delete]`
+* Added count method to basic functions -> `spaceInvoices.categories[create, edit, delete, list, count]`
+* Dependencies security updates
+
 ## 1.1.0 - 2018-12-20
 
 * Added a testing option allowing connection to the test api
